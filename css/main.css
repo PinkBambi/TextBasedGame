@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+  margin-left: -40px;
+}
+ul>li:nth-child(3n+1) {
+  color: #104e75;
+  font-weight: bold;
+  font-size: 25px;
+}
+ul>li:nth-child(3n+2) {
+  color: #4dab13;
+  font-weight: bold;
+}
+ul>li:nth-child(3n) {
+  color: #a83314;
+  font-weight: bold;
+}
