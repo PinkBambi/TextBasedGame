@@ -1,7 +1,29 @@
+body {
+  background-color: black;
+  text-transform: uppercase;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: bold;
+  color: green;
+}
 ul {
   list-style-type: none;
   margin-left: -40px;
 }
+input[type="text"] {
+  display: block;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  font-size: 18px;
+  box-shadow: none;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Lucida Console", Monaco, monospace;
+  color: green;
+  text-transform: uppercase;
+}
+/*
 ul>li:nth-child(3n+1) {
   color: #104e75;
   font-weight: bold;
@@ -15,3 +37,4 @@ ul>li:nth-child(3n) {
   color: #a83314;
   font-weight: bold;
 }
+*/
