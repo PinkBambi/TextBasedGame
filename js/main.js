@@ -8,13 +8,13 @@ app.controller('playerAnwers', function($scope) {
         'What do you do first?',
         'Search for: people, food or shelter?'
     ];
-    /************************/
+    /************ Enter presses the button to make the function work ************/
     $("#thePlace").keyup(function(e) {
         if (e.keyCode == 13) {
-            $scope.add();
+            document.getElementById('theButton').click();
         }
     });
-    /************************/
+    /************ Game function ************/
     $scope.add = function() {
         console.log("Spelare skrev: " + $scope.input);
         var lowerResult = $scope.input.toLowerCase();
@@ -34,12 +34,18 @@ app.controller('playerAnwers', function($scope) {
                 'balalalfsgrewsgbvsfra',
                 'What is your reaction when a hand is placed on your shoulder?',
                 'Do you: Scream, fight or run?');
+            $("#thePlace").keyup(function(e) {
+                if (e.keyCode == 13) {
+                      $scope.addShelter();
+                }
+            });
         }
         $scope.input = '';
     };
 
     /**********/
     function ActionHand() {
+      console.log("working");
         var lowerResult2 = $scope.input.toLowerCase();
         if (lowerResult2 === "scream") {
             $scope.items.push(
@@ -61,10 +67,14 @@ app.controller('playerAnwers', function($scope) {
         }
     }
 
-
+    /***** Focus not lost on input area *****/
+    $('#thePlace').blur(function(event) {
+        setTimeout(function() {
+            $("#thePlace").focus();
+        }, 20);
+    });
     /****************/
     /*$scope.remove = function(index) {
         $scope.items.splice(index, 1);
       };*/
 });
-/**********/
